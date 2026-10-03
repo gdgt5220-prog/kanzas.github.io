@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ярослав — контент, видео, веб и тексты</title>
-<meta name="description" content="Портфолио Ярослава: копирайтинг, SMM, видеоконтент и веб-разработка. Выберите направление и смотрите работы.">
+<meta name="description" content="Портфолио Ярослава: копирайтинг, SMM, видеоконтент и веб-разработка. Живые работы, честные результаты, контакты.">
 <style>
   :root{
     --green:#2e9e6b; --green-d:#26855a;
@@ -31,7 +31,11 @@
   .sec-title{text-align:center;font-size:26px;font-weight:800;margin:48px 0 6px}
   .sec-sub{text-align:center;color:var(--muted);font-size:15px;margin-bottom:30px}
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;padding-bottom:20px}
+  .about{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;font-size:16px;color:#374151}
+  .about b{color:var(--ink)}
+  .about .principle{margin-top:12px;font-size:14px;font-weight:700;color:var(--green-d)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;padding-bottom:10px}
   .role{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;display:flex;flex-direction:column;gap:12px;transition:.18s;position:relative}
   .role:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,35,40,.08);border-color:transparent}
   .role .ico{width:46px;height:46px;color:var(--green)}
@@ -44,6 +48,21 @@
   .role.soon .go{color:var(--muted)}
   .badge{position:absolute;top:18px;right:18px;font-size:11px;font-weight:700;color:var(--green);background:rgba(46,158,107,.1);padding:4px 9px;border-radius:20px}
   .badge.gray{color:var(--muted);background:rgba(107,114,128,.12)}
+
+  .works{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .work{position:relative;border-radius:14px;overflow:hidden;background:#000}
+  .work img,.work video{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  .work .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(15,20,25,.78));color:#fff;font-size:12.5px;font-weight:600;padding:26px 12px 10px}
+
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;border-left:3px solid var(--green)}
+  .svc .t{font-size:15px;font-weight:800;margin-bottom:6px}
+  .svc .d{font-size:13.5px;color:var(--muted)}
+
+  .teaser{margin-top:26px;background:var(--card);border:1.5px dashed var(--green);border-radius:16px;padding:22px 24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;position:relative}
+  .teaser .badge{position:static}
+  .teaser .t{font-size:17px;font-weight:800}
+  .teaser .d{font-size:14px;color:var(--muted);flex:1 1 320px}
 
   footer{background:var(--ink);color:#cbd2d9;margin-top:50px;padding:46px 0 30px}
   footer h2{color:#fff;font-size:24px;text-align:center;margin-bottom:8px}
@@ -70,6 +89,12 @@
 </header>
 
 <main class="wrap">
+
+  <section class="about">
+    <b>Обо мне.</b> 7+ лет в контенте и SMM: пишу тексты, снимаю и монтирую видео, собираю сайты и чат-боты. AI интегрирую в каждый этап — от генерации сценариев и образов до кода и аналитики. Работую от задачи и метрик: показываю не «красивые картинки», а готовые работы и подтверждённые результаты.
+    <div class="principle">Принцип портфолио: ни одной придуманной цифры — только то, что могу подтвердить.</div>
+  </section>
+
   <h2 class="sec-title">Направления работы</h2>
   <p class="sec-sub">Готовые двери открывают страницы с кейсами. Серые — в подготовке, откроются скоро.</p>
 
@@ -133,6 +158,35 @@
     </div>
 
   </div>
+
+  <h2 class="sec-title">Избранные работы</h2>
+  <p class="sec-sub">Визуал и видео из реальных проектов — подробности в кейсах на страницах направлений.</p>
+
+  <div class="works">
+    <div class="work"><img src="flat1.jpg" alt="Карточка объекта ZAYREX" loading="lazy"><span class="cap">ZAYREX: карточки объектов</span></div>
+    <div class="work"><img src="flat2.jpg" alt="Карточка объекта ZAYREX" loading="lazy"><span class="cap">ZAYREX: единый визуал линейки</span></div>
+    <div class="work"><img src="flat3.jpg" alt="Карточка объекта ZAYREX" loading="lazy"><span class="cap">ZAYREX: цена и платёж в кадре</span></div>
+    <div class="work"><video muted preload="metadata" src="video.mp4"></video><span class="cap">ZAYREX: ролик с AI-аватаром</span></div>
+    <div class="work"><img src="school.jpg" alt="Изделия школы Полимерия" loading="lazy"><span class="cap">«Полимерия»: визуал школы творчества</span></div>
+    <div class="work"><img src="brand.jpg" alt="AI-образ личного бренда" loading="lazy"><span class="cap">Личный бренд: AI-образ и маскоты</span></div>
+  </div>
+
+  <h2 class="sec-title">Услуги</h2>
+  <p class="sec-sub">Что можно заказать мне под ключ.</p>
+
+  <div class="services">
+    <div class="svc"><div class="t">Контент и видео</div><div class="d">Сценарии Reels/Shorts, монтаж в CapCut, AI-анимация (Kling), озвучка, упаковка услуг.</div></div>
+    <div class="svc"><div class="t">Веб-разработка</div><div class="d">Сайты на Tilda и генерация кода через Claude (HTML/CSS/JS), адаптивная вёрстка, деплой.</div></div>
+    <div class="svc"><div class="t">Чат-боты</div><div class="d">Проектирование логики ботов, настройка воронок продаж на LeadTech.ru.</div></div>
+    <div class="svc"><div class="t">Маркетинг и тексты</div><div class="d">Копирайтинг, работа с ЦА, триггеры продаж, основы SEO/GEO.</div></div>
+  </div>
+
+  <div class="teaser">
+    <span class="badge gray">скоро</span>
+    <div class="t">Интерактивная презентация ЖК «Северный парк»</div>
+    <div class="d">Листалка слайдов на JS: знакомство с проектом, планировки, инженерные системы. Вернётся на сайт отдельной страницей презентаций.</div>
+  </div>
+
 </main>
 
 <footer>
