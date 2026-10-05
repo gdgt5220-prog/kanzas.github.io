@@ -56,6 +56,18 @@
   .btn-link{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:700;padding:10px 18px;border-radius:8px;margin-top:12px;font-size:14px;transition:.15s}
   .btn-link:hover{background:var(--green-d)}
 
+  /* Стили для нового блока AI */
+  .ai-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:16px 0}
+  .ai-gallery img{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:1/1}
+  .ai-videos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+  .ai-videos video{width:100%;border-radius:10px;display:block;background:#000}
+  .before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+  .before-after div{text-align:center}
+  .before-after img{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:3/4}
+  .before-after span{font-size:12px;color:var(--muted);margin-top:6px;display:block}
+  .clips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+  .clips-grid img{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:9/16}
+
   .incl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px;margin:30px 0}
   .incl h2{font-size:20px;font-weight:800;margin-bottom:16px}
   .grid6{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
@@ -68,7 +80,7 @@
   footer .frow{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;font-size:15px;margin-top:14px}
   footer .frow a{color:#fff;font-weight:600;border-bottom:1px solid #3a4149}
   footer .copy{font-size:12px;color:#6b7280;margin-top:24px}
-  @media(max-width:560px){.shots{grid-template-columns:1fr 1fr}.analytics-grid{grid-template-columns:1fr}}
+  @media(max-width:560px){.shots{grid-template-columns:1fr 1fr}.analytics-grid{grid-template-columns:1fr}.ai-videos{grid-template-columns:1fr}.before-after{grid-template-columns:1fr}.clips-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -90,7 +102,7 @@
   <div class="stats">
     <div class="stat"><div class="n">6.8%</div><div class="d">конверсия лендинга «Полимерия»<br>данные Яндекс.Метрики</div></div>
     <div class="stat plain"><div class="n">357</div><div class="d">визитов на лендинг за период<br>338 переходов по рекламе</div></div>
-    <div class="stat plain"><div class="n">12k ₽</div><div class="d">доход с партнёрской программы<br>при чеке продукта 25 000 ₽</div></div>
+    <div class="stat plain"><div class="n">AI</div><div class="d">нейрофотосессия и генерация<br>видео без выезда на локацию</div></div>
   </div>
 </header>
 
@@ -117,7 +129,7 @@
     <div class="result">Результат: готовый контент-пак — единый визуал карточек объектов и серия роликов с AI-аватаром под публикацию.</div>
   </article>
 
-  <!-- КЕЙС 2: ПОЛИМЕРИЯ (ОБНОВЛЁННЫЙ) -->
+  <!-- КЕЙС 2: ПОЛИМЕРИЯ -->
   <article class="case">
     <span class="tag">Кейс · Образование</span>
     <h2>«Полимерия»: контент-стратегия и аналитика для школы творчества</h2>
@@ -149,6 +161,52 @@
     </a>
     
     <div class="result">Результат: конверсия лендинга 6.8% при норме ниши 2–3% — по данным Яндекс.Метрики.</div>
+  </article>
+
+  <!-- НОВЫЙ БЛОК: AI-ВИЗУАЛ -->
+  <article class="case">
+    <span class="tag">AI-продакшн · Визуал</span>
+    <h2>Нейрофотосессия и генерация контента</h2>
+    <div class="body-text">
+      Создаю фотореалистичные образы и динамичные видео без выезда на локацию и съёмочной группы. Париж, Антарктида, курорт — всё генерируется по реальным чертам лица. Экономия бюджета на съёмке и путешествиях при сохранении премиум-вида.
+    </div>
+    
+    <h3 style="font-size:16px;font-weight:700;margin:18px 0 8px;color:var(--ink)">Галерея образов</h3>
+    <div class="ai-gallery">
+      <img src="ai-paris-tower.jpg" alt="AI-фото: Париж, Эйфелева башня" loading="lazy">
+      <img src="ai-paris-cafe.jpg" alt="AI-фото: Париж, кафе" loading="lazy">
+      <img src="ai-beach.jpg" alt="AI-фото: Курорт, пляж" loading="lazy">
+      <img src="ai-pinguin.jpg" alt="AI-фото: Антарктида, пингвины" loading="lazy">
+      <img src="ai-bears.jpg" alt="AI-фото: Арктика, медведи" loading="lazy">
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin:18px 0 8px;color:var(--ink)">Кейс: Нейрофотосессия для клиента</h3>
+    <div class="body-text">Задача: создать контент для личного бренда без выезда на море. Решение: перенос реальных черт лица на генерируемую локацию.</div>
+    <div class="before-after">
+      <div>
+        <img src="ai-client-before.jpg" alt="Исходное фото клиента" loading="lazy">
+        <span>Исходник (фото из соцсетей)</span>
+      </div>
+      <div>
+        <img src="ai-client-after.jpg" alt="Результат нейрофотосессии" loading="lazy">
+        <span>Результат (AI-генерация локации)</span>
+      </div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:700;margin:18px 0 8px;color:var(--ink)">AI-видео и анимация</h3>
+    <div class="ai-videos">
+      <video controls preload="metadata" src="ai-borsch.mp4">Ваш браузер не поддерживает видео.</video>
+      <video controls preload="metadata" src="ai-bears.mp4">Ваш браузер не поддерживает видео.</video>
+    </div>
+    <div class="analytics-note">Генерация и анимация в нейросетях (Kling, Midjourney) + монтаж в CapCut. Такой контент досматривают до конца — главный сигнал для алгоритмов VK и TikTok.</div>
+
+    <h3 style="font-size:16px;font-weight:700;margin:18px 0 8px;color:var(--ink)">Живые охваты клипов</h3>
+    <div class="clips-grid">
+      <img src="clip-neuro-1.jpg" alt="Клип: 92 просмотра" loading="lazy">
+      <img src="clip-neuro-2.jpg" alt="Клип: 137 просмотров" loading="lazy">
+      <img src="clip-neuro-3.jpg" alt="Клип: 75 просмотров" loading="lazy">
+    </div>
+    <div class="result">Результат: готовая линейка визуала для соцсетей, экономия бюджета на фотосессиях и живые охваты без рекламного бюджета.</div>
   </article>
 
   <!-- КЕЙС 3: ЛИЧНЫЙ БРЕНД -->
