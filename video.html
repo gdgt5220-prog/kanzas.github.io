@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Видеоконтент и AI-анимация — Ярослав</title>
+<title>Видеопродакшн и AI-анимация — Ярослав</title>
 <meta name="description" content="AI-видеопродакшн: персональные клипы, фэнтези-эпики, монтаж, дистрибуция. Кейсы Ярослава с реальными результатами.">
 <style>
   :root{
@@ -45,13 +45,28 @@
   
   .btn-link{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:700;padding:10px 18px;border-radius:8px;margin-top:12px;font-size:14px;transition:.15s}
   .btn-link:hover{background:var(--green-d)}
-  .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--green);font-weight:700;padding:10px 18px;border-radius:8px;margin-top:12px;font-size:14px;border:2px solid var(--green);transition:.15s}
-  .btn-outline:hover{background:var(--green);color:#fff}
 
-  .service-box{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid var(--green);border-radius:16px;padding:28px 26px;margin:22px 0;text-align:center}
-  .service-box h2{font-size:24px;font-weight:800;margin-bottom:12px;color:var(--green-d)}
-  .service-box p{font-size:16px;color:#374151;margin-bottom:16px}
-  .price{font-size:28px;font-weight:800;color:var(--green);margin-bottom:16px}
+  /* Сетка для динамичных видео */
+  .dynamic-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+  .dynamic-grid video{width:100%;border-radius:10px;display:block;background:#000;aspect-ratio:16/9}
+  .dynamic-caption{font-size:13px;color:var(--muted);text-align:center;margin-top:4px}
+
+  /* Блок До/После */
+  .service-box{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid var(--green);border-radius:16px;padding:28px 26px;margin:22px 0}
+  .service-box h2{font-size:24px;font-weight:800;margin-bottom:12px;color:var(--green-d);text-align:center}
+  .service-box > p{text-align:center;font-size:16px;color:#374151;margin-bottom:20px}
+  
+  .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;align-items:start}
+  .ba-item{text-align:center}
+  .ba-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--green);margin-bottom:6px}
+  .ba-media img, .ba-media video{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:3/4;background:#eee}
+  .ba-media video{aspect-ratio:auto;height:auto} /* Видео могут быть разной высоты */
+  
+  .price-tag{font-size:28px;font-weight:800;color:var(--green);text-align:center;margin:16px 0}
+
+  /* Короткие форматы */
+  .shorts-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+  .shorts-grid video{width:100%;border-radius:10px;display:block;background:#000;aspect-ratio:9/16}
 
   .incl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px;margin:30px 0}
   .incl h2{font-size:20px;font-weight:800;margin-bottom:16px}
@@ -65,6 +80,12 @@
   footer .frow{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;font-size:15px;margin-top:14px}
   footer .frow a{color:#fff;font-weight:600;border-bottom:1px solid #3a4149}
   footer .copy{font-size:12px;color:#6b7280;margin-top:24px}
+
+  @media(max-width:600px){
+    .dynamic-grid{grid-template-columns:1fr}
+    .ba-pair{grid-template-columns:1fr}
+    .shorts-grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -109,33 +130,111 @@
     <div class="result">Результат: готовый продукт уровня студии, созданный в одиночку за счёт AI-инструментов.</div>
   </article>
 
-  <!-- КЕЙС 2: ФЭНТЕЗИ -->
+  <!-- КЕЙС 2: ЛУКОМОРЬЕ -->
   <article class="case">
-    <span class="tag">AI-анимация · Сторителлинг</span>
-    <h2>Фэнтези-эпик: дерево, кот и богатыри</h2>
+    <span class="tag">AI-анимация · Классика</span>
+    <h2>«Лукоморье»: AI-анимация по мотивам произведений А.С. Пушкина</h2>
     <div class="single">
       <video controls preload="metadata" src="ai-fantasy.mp4">Ваш браузер не поддерживает видео.</video>
     </div>
     <div class="body-text">
-      Сюжетная анимация по мотивам славянского фольклора: дерево с цепями → учёный кот → гоблин → русалка → богатыри → битва в небе → ведьма → царь Кощей. Динамичный монтаж, единый стиль, эмоциональная музыка. Пример того, как AI позволяет создавать сложные миры без художников и аниматоров.
+      Анимационная интерпретация «У лукоморья дуб зелёный»: дерево с золотой цепью → учёный кот → русалка на ветвях → леший → богатыри → Баба-Яга → Кощей. Единый сказочный стиль, динамичный монтаж, эмоциональная музыка. Пример того, как AI позволяет оживить классику без художников и аниматоров.
     </div>
     <div class="result">Результат: полноценный мультфильм, созданный через генерацию и склейку кадров.</div>
   </article>
 
-  <!-- УСЛУГА: ПЕРСОНАЛЬНЫЙ КЛИП -->
+  <!-- КЕЙС 3: ДИНАМИКА И LIFESTYLE -->
+  <article class="case">
+    <span class="tag">Экшн · Атмосфера · Стиль</span>
+    <h2>Динамичные ролики и Lifestyle-контент</h2>
+    <div class="body-text">
+      Создание видео разных жанров: от экстремального драйва (мотоциклы) до премиальной эстетики (Париж) и спокойствия природы (дельфины). Каждый ролик адаптирован под конкретную площадку и задачу.
+    </div>
+    
+    <div class="dynamic-grid">
+      <div>
+        <video controls preload="metadata" src="ai-moto-red.mp4">Ваш браузер не поддерживает видео.</video>
+        <div class="dynamic-caption">Мото: Красный байк (экшн)</div>
+      </div>
+      <div>
+        <video controls preload="metadata" src="ai-moto-black.mp4">Ваш браузер не поддерживает видео.</video>
+        <div class="dynamic-caption">Мото: Чёрный байк (кинематограф)</div>
+      </div>
+      <div>
+        <video controls preload="metadata" src="ai-paris-live.mp4">Ваш браузер не поддерживает видео.</video>
+        <div class="dynamic-caption">Париж: Оживление фото (Lifestyle)</div>
+      </div>
+      <div>
+        <video controls preload="metadata" src="ai-dolphins.mp4">Ваш браузер не поддерживает видео.</video>
+        <div class="dynamic-caption">Дельфины: Природа и атмосфера</div>
+      </div>
+    </div>
+    <div class="result">Результат: универсальный набор визуалов для решения любых маркетинговых задач.</div>
+  </article>
+
+  <!-- УСЛУГА: ПЕРСОНАЛЬНЫЙ КЛИП (ДО/ПОСЛЕ) -->
   <section class="service-box">
-    <h2>🎁 Персональный AI-клип в подарок</h2>
-    <p>Создам уникальный анимационный ролик на День Рождения, Новый Год или свадьбу. Присылаете фото именинника → я помещаю его в любой образ (богатырь, космонавт, сказочный герой) → монтирую сюжет под музыку.</p>
-    <div class="price">от 3 500 ₽</div>
-    <a href="mailto:maxkan77@yandex.ru" class="btn-link">
-      Заказать клип →
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
+    <h2>🎁 Услуга: Персональный AI-клип в подарок</h2>
+    <p>Превращаю обычные фотографии в живые видео. Идеально для Дня Рождения, Нового Года или просто приятного сюрприза.</p>
+    
+    <!-- Пара 1 -->
+    <div class="ba-pair">
+      <div class="ba-item">
+        <div class="ba-label">Было (Фото)</div>
+        <div class="ba-media">
+          <img src="ai-client-src-2.jpg" alt="Исходное фото клиента 2">
+        </div>
+      </div>
+      <div class="ba-item">
+        <div class="ba-label">Стало (Видео)</div>
+        <div class="ba-media">
+          <video controls preload="metadata" src="ai-client-live.mp4">Ваш браузер не поддерживает видео.</video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Пара 2 -->
+    <div class="ba-pair">
+      <div class="ba-item">
+        <div class="ba-label">Было (Фото)</div>
+        <div class="ba-media">
+          <img src="ai-client-src-3.jpg" alt="Исходное фото клиента 3">
+        </div>
+      </div>
+      <div class="ba-item">
+        <div class="ba-label">Результат</div>
+        <div class="ba-media" style="background:#eef7f2; display:flex; align-items:center; justify-content:center; aspect-ratio:3/4;">
+           <span style="color:var(--green); font-weight:700; padding:10px;">Смотрите пример выше 👆<br>(Один ролик демонстрирует технологию)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-tag">от 3 500 ₽</div>
+    <div style="text-align:center">
+      <a href="mailto:maxkan77@yandex.ru" class="btn-link">
+        Заказать клип →
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
   </section>
 
-  <!-- КЕЙС 3: ПАРТНЁРКИ -->
+  <!-- КЕЙС 4: КОРОТКИЕ ФОРМАТЫ -->
   <article class="case">
-    <span class="tag">Монетизация · Трафик</span>
+    <span class="tag">Reels / VK Клипы / Shorts</span>
+    <h2>Вирусные короткие ролики</h2>
+    <div class="body-text">
+      Создание залипательного контента под алгоритмы социальных сетей. Высокая динамика, яркие эмоции, национальный колорит или эпичность — всё ради удержания внимания зрителя.
+    </div>
+    <div class="shorts-grid">
+      <video controls preload="metadata" src="ai-borsch.mp4">Ваш браузер не поддерживает видео.</video>
+      <video controls preload="metadata" src="ai-bears.mp4">Ваш браузер не поддерживает видео.</video>
+    </div>
+    <div class="result">Результат: контент, который досматривают до конца и репостят.</div>
+  </article>
+
+  <!-- КЕЙС 5: МОНЕТИЗАЦИЯ -->
+  <article class="case">
+    <span class="tag">Маркетинг · Трафик</span>
     <h2>Адаптация видеоряда и партнёрский маркетинг</h2>
     <div class="meta">
       <div><div class="k">Задача</div><div class="v">Монетизация чужого контента</div></div>
